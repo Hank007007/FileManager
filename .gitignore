@@ -1,4 +1,5 @@
 # Binaries for programs and plugins
+*.iml
 *.exe
 *.exe~
 *.dll
@@ -13,3 +14,19 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+.cache/
+coverage/
+dist/*
+!dist/index.html
+node_modules/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
