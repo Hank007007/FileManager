@@ -10,6 +10,8 @@ type User struct {
 	//ID        string `gorm:"type:uuid;primary_key;default:gen_random_uuid()"` // for gen_random_uuid for postgreS 13
 	ID        string `gorm:primary_key;column:user_id;type:VARCHAR;"`
 	Name      string `gorm:"column:user_nm;type:VARCHAR(30);"`
+	Password  string  `gorm:"column:user_pw;type:VARCHAR(30);"`
+	permission  string  `gorm:"column:permission;type:VARCHAR(30);"`
 	CreatedAt time.Time `gorm:"column:create_dttm;type:TIMESTAMP;`
 	UpdatedAt time.Time `gorm:"column:mod_dttm;type:TIMESTAMP;`
 	CreateUserNm         string    `gorm:"column:create_user_nm;type:VARCHAR;"`

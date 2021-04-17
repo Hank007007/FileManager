@@ -48,6 +48,9 @@ func main() {
 	userListCtrl := &controller.UserList{}
 	healthCtrl := &controller.Healthcheck{}
 
+	main := server.Echo.Group("/FileManager")
+	main.GET("/home", controller.GetStartPage)
+
 	// api endpoints
 	g := server.Echo.Group("/api")
 	g.GET("/users/:id", userCtrl.GetUserJSON)
